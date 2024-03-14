@@ -53,3 +53,31 @@ number = 12345
 reversed_number = reverse_number(number)
 print("Original number:", number)
 print("Reversed number:", reversed_number)
+
+
+class Solution:
+    def reverse(self, x: int) -> int:
+        min_x=-2**31
+        max_x=2**31-1
+        sign=-1 if x<0 else 1
+        x=abs(x)
+
+        reverse=0
+        while x>0:
+            print("max",max_x,"min",min_x)
+            if reverse>max_x or reverse <min_x:
+                print("returnnnn",reverse)
+                return 0
+            remainder = x%10
+            reverse=reverse*10+remainder
+            x=x//10
+            print("reverse",reverse)
+        print("sign*reverse",sign*reverse)
+        return sign*reverse
+
+# Create an instance of Solution
+sol = Solution()
+
+# Call the reverse method on the instance
+result = sol.reverse(1534236469)
+print(result)

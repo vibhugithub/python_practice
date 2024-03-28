@@ -1,4 +1,4 @@
-def linearSearch(n: int, num: int, arr: [int]) -> int:
+def linearSearch(n: int, num: int, arr) -> int:
     for i in range(0, len(arr)):
         if arr[i] == num:
             return i
